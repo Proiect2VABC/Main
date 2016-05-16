@@ -10,26 +10,24 @@
 
 #include "entry.h"
 
-
 class location {
 	friend class entries_list;
 	friend class devices;
-	entry* device;
+	entry* data;
 
 	string location_name = "not_set";
-	int visits;
 
 	location *next;
 	location *prev;
 
-
 	void set_name(string);
-	void print();
+	void print(int nr);
+	void show();
 
 public:
 	location(entry*);
+	location(entry*, string name);
 
 };
-
 
 #endif /* LOCATIONS_H_ */

@@ -22,6 +22,7 @@ class entries_list {
 
 	location* first_location;
 	location* last_location;
+
 	int number_of_locations;
 
 	std::vector<entry*> entries_q;
@@ -35,7 +36,11 @@ public:
 	void save(string filename);
 	void print_device(string name);
 	void print_time_interval(int start, int end);
-
+	void print_locations();
+	void new_location(entry* entry, string name);
+	void clean();
+	entry* get_entry(int number);
+	void show(int nr);
 };
 
 

@@ -16,7 +16,9 @@
 using namespace std;
 
 class entry {
+	friend class location;
 	friend class entries_list;
+	int crt;
 	string device_name;
 	float latitude;
 	float longitude;
@@ -28,7 +30,7 @@ class entry {
 	void print();
 
 public:
-	entry(string, float, float, int);
+	entry(int, string, float, float, int);
 };
 
 
